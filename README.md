@@ -23,5 +23,15 @@ pip install -r requirements.txt
 ### 5 Run the API Server
 
 python app.py
+### 6 Interact with the API
+
+Add products:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"name":"Tablet","description":"A lightweight tablet","price":600.0}' \
+http://127.0.0.1:5000/products
+
+
+retrieve all product: 
+curl http://127.0.0.1:5000/products
 
 
